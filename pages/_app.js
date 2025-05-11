@@ -7,6 +7,7 @@ import "../styles/Biuro.scss";
 import "../styles/UtworzUmowe.scss";
 import "../styles/ListaUmow.scss";
 import "../styles/ListaUmowBiuro.scss";
+import "../styles/UmowaWiecej.scss"
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Leftside from "../components/Leftside";
