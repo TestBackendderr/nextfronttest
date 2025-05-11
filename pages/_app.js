@@ -4,6 +4,7 @@ import "../styles/Navbar.scss";
 import "../styles/Leftside.scss";
 import "../styles/Handlowiec.scss";
 import "../styles/Biuro.scss";
+import "../styles/UtworzUmowe.scss";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {

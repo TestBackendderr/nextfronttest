@@ -1,0 +1,140 @@
+.utworz-umowe {
+  padding: 20px;
+  background-color: #f4f6f9;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 14px;
+      color: #666;
+
+      &.active {
+        color: #1a252f;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .step {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .sub-panel {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+
+      h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      textarea {
+        height: 100px;
+        resize: vertical;
+      }
+    }
+
+    .products-selection {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .product-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        input {
+          width: auto;
+        }
+
+        .product-tag {
+          padding: 5px 10px;
+          border-radius: 12px;
+          font-size: 12px;
+          color: #fff;
+
+          &.product-fotowoltaika {
+            background-color: #28a745;
+          }
+          &.product-magazyn-energii {
+            background-color: #007bff;
+          }
+          &.product-magazyn-ciepła {
+            background-color: #dc3545;
+          }
+          &.product-klimatyzacje {
+            background-color: #17a2b8;
+          }
+          &.product-pompa-ciepła {
+            background-color: #6610f2;
+          }
+          &.product-inne {
+            background-color: #6c757d;
+          }
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      .action-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #1a252f;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 14px;
+
+        &.secondary {
+          background-color: #6c757d;
+        }
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
