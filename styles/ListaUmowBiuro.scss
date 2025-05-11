@@ -1,11 +1,11 @@
 .lista-umow-biuro-page {
   display: flex;
   min-height: 100vh;
+  background-color: #f7f8fa;
 
   .lista-umow-biuro-content {
     margin-left: 220px;
     padding: 80px 20px 20px;
-    background-color: #f4f6f9;
     flex: 1;
   }
 }
@@ -13,156 +13,196 @@
 .lista-umow-biuro {
   width: 100%;
   background-color: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 
   h2 {
     color: #1a252f;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 26px;
+    font-weight: 700;
     margin-bottom: 20px;
+    padding-left: 10px;
+    font-family: "Inter", sans-serif;
   }
 
-  .umowa-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-    color: #1a252f;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px 8px 0 0;
-    font-size: 12px;
-    cursor: pointer;
-    overflow-x: auto;
-    white-space: nowrap;
+  .table-container {
+    width: 100%;
+    overflow-x: auto; // Единственный горизонтальный скроллбар
+    -webkit-overflow-scrolling: touch; // Плавная прокрутка на мобильных
 
-    span {
-      flex: 1 1 0;
-      text-align: left;
-      padding: 0 10px;
-      min-width: 150px;
+    .umowa-header.sticky {
+    //   position: sticky;
+      top: 80px; // Под навбар и отступ
+      z-index: 10;
+      display: flex;
+      font-weight: 600;
+      color: #1a252f;
+      background-color: #f9fafb;
+      padding: 12px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      span {
+        flex: none;
+        width: 140px; // Фиксированная ширина для выравнивания
+        text-align: left;
+        padding: 0 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: background-color 0.3s;
+        font-family: "Inter", sans-serif;
+
+        &:hover {
+          background-color: #f1f3f5;
+        }
+      }
+    }
+
+    .umowy-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .umowa-card {
+      background-color: #ffffff;
+      padding: 12px;
+      min-height: 60px;
+      border-bottom: 1px solid #e2e8f0;
+      transition: box-shadow 0.3s, transform 0.2s;
 
       &:hover {
-        background-color: #e9ecef;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .umowa-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 8px;
+        font-size: 12px;
+        color: #1a252f;
+        align-items: center;
+
+        span {
+          flex: none;
+          width: 140px; // Та же ширина, что у заголовков
+          padding: 0 8px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+          white-space: nowrap;
+          font-family: "Inter", sans-serif;
+
+          &.tooltip {
+            position: relative;
+            cursor: default;
+
+            &:hover .tooltip-text {
+              visibility: visible;
+            }
+
+            .tooltip-text {
+              visibility: hidden;
+              position: absolute;
+              top: -30px;
+              left: 0;
+              background-color: #1a252f;
+              color: #ffffff;
+              padding: 6px 10px;
+              border-radius: 4px;
+              font-size: 11px;
+              max-width: 250px;
+              white-space: normal;
+              word-wrap: break-word;
+              z-index: 1;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+
+        .product-tag {
+          display: inline-block;
+          padding: 4px 8px;
+          border-radius: 12px;
+          font-size: 10px;
+          color: #ffffff;
+          font-weight: 500;
+          margin-right: 5px;
+          margin-bottom: 3px;
+
+          &.product-fotowoltaika {
+            background-color: #2ecc71;
+          }
+          &.product-magazyn-energii {
+            background-color: #3498db;
+          }
+          &.product-magazyn-ciepła {
+            background-color: #e74c3c;
+          }
+          &.product-klimatyzacje {
+            background-color: #1abc9c;
+          }
+          &.product-pompa-ciepła {
+            background-color: #f39c12;
+          }
+          &.product-inne {
+            background-color: #95a5a6;
+          }
+        }
+
+        .status {
+          display: inline-block;
+          padding: 4px 8px;
+          border-radius: 12px;
+          font-size: 10px;
+          color: #ffffff;
+          font-weight: 500;
+          text-align: center;
+
+          &.status-dodana {
+            background-color: #7f8c8d;
+          }
+          &.status-sprawdzona {
+            background-color: #2ecc71;
+          }
+          &.status-zlecona-do-realizacji {
+            background-color: #3498db;
+          }
+          &.status-umówiony-montaż {
+            background-color: #f39c12;
+          }
+        }
       }
     }
   }
+}
 
-  .umowy-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-x: auto;
+@media (max-width: 1200px) {
+  .lista-umow-biuro .umowa-header span,
+  .lista-umow-biuro .umowa-content span {
+    width: 120px;
   }
+}
 
-  .umowa-card {
-    background-color: #ffffff;
-    padding: 20px;
-    min-height: 100px;
-    width: 100%;
-    border-bottom: 1px solid #e9ecef;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
+@media (max-width: 900px) {
+  .lista-umow-biuro .table-container {
+    .umowa-header,
     .umowa-content {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      gap: 10px;
-      font-size: 12px;
-      color: #1a252f;
-      align-items: center;
-      white-space: nowrap;
+      flex-wrap: wrap;
+    }
 
-      span {
-        flex: 1 1 0;
-        min-width: 150px;
-        padding: 0 10px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        vertical-align: middle;
-      }
-
-      .product-tag {
-        display: inline-block;
-        padding: 6px 12px;
-        border-radius: 12px;
-        font-size: 12px;
-        color: #ffffff;
-        font-weight: 500;
-        margin-right: 10px;
-        margin-bottom: 5px;
-
-        &.product-fotowoltaika {
-          background-color: #28a745;
-        }
-        &.product-magazyn-energii {
-          background-color: #17a2b8;
-        }
-        &.product-magazyn-ciepła {
-          background-color: #dc3545;
-        }
-        &.product-klimatyzacje {
-          background-color: #007bff;
-        }
-        &.product-pompa-ciepła {
-          background-color: #fd7e14;
-        }
-        &.product-inne {
-          background-color: #6c757d;
-        }
-      }
-
-      .tooltip {
-        position: relative;
-        display: inline-block;
-        cursor: default;
-
-        .tooltip-text {
-          visibility: hidden;
-          position: absolute;
-          top: -10px;
-          left: 0;
-          transform: translateY(-100%);
-          background-color: #1a252f;
-          color: #ffffff;
-          padding: 8px 12px;
-          border-radius: 4px;
-          font-size: 12px;
-          max-width: 300px;
-          white-space: normal;
-          word-wrap: break-word;
-          z-index: 1;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        &:hover .tooltip-text {
-          visibility: visible;
-        }
-      }
-
-      .status {
-        display: inline-block;
-        padding: 6px 12px;
-        border-radius: 12px;
-        font-size: 12px;
-        color: #ffffff;
-        font-weight: 500;
-        text-align: center;
-
-        &.status-dodana {
-          background-color: #6c757d;
-        }
-        &.status-sprawdzona {
-          background-color: #28a745;
-        }
-        &.status-zlecona-do-realizacji {
-          background-color: #007bff;
-        }
-        &.status-umówiony-montaż {
-          background-color: #fd7e14;
-        }
-      }
+    .umowa-header span,
+    .umowa-content span {
+      flex: 1 1 100%;
+      width: 100%;
+      padding: 5px;
     }
   }
 }
