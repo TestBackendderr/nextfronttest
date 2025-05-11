@@ -9,7 +9,7 @@ const Leftside = () => {
 
   const menuItems = isBiuro
     ? [
-        { label: "Lista Umów", href: "/biuro" },
+        { label: "Lista Umów", href: "/biuro/BiuroLista" },
         { label: "Obsługa Umów", href: "/biuro/obsluga" },
       ]
     : [

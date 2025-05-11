@@ -1,0 +1,168 @@
+.lista-umow-biuro-page {
+  display: flex;
+  min-height: 100vh;
+
+  .lista-umow-biuro-content {
+    margin-left: 220px;
+    padding: 80px 20px 20px;
+    background-color: #f4f6f9;
+    flex: 1;
+  }
+}
+
+.lista-umow-biuro {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    color: #1a252f;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .umowa-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #1a252f;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    font-size: 12px;
+    cursor: pointer;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    span {
+      flex: 1 1 0;
+      text-align: left;
+      padding: 0 10px;
+      min-width: 150px;
+
+      &:hover {
+        background-color: #e9ecef;
+      }
+    }
+  }
+
+  .umowy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .umowa-card {
+    background-color: #ffffff;
+    padding: 20px;
+    min-height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    .umowa-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 10px;
+      font-size: 12px;
+      color: #1a252f;
+      align-items: center;
+      white-space: nowrap;
+
+      span {
+        flex: 1 1 0;
+        min-width: 150px;
+        padding: 0 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+      }
+
+      .product-tag {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-right: 10px;
+        margin-bottom: 5px;
+
+        &.product-fotowoltaika {
+          background-color: #28a745;
+        }
+        &.product-magazyn-energii {
+          background-color: #17a2b8;
+        }
+        &.product-magazyn-ciepła {
+          background-color: #dc3545;
+        }
+        &.product-klimatyzacje {
+          background-color: #007bff;
+        }
+        &.product-pompa-ciepła {
+          background-color: #fd7e14;
+        }
+        &.product-inne {
+          background-color: #6c757d;
+        }
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: default;
+
+        .tooltip-text {
+          visibility: hidden;
+          position: absolute;
+          top: -10px;
+          left: 0;
+          transform: translateY(-100%);
+          background-color: #1a252f;
+          color: #ffffff;
+          padding: 8px 12px;
+          border-radius: 4px;
+          font-size: 12px;
+          max-width: 300px;
+          white-space: normal;
+          word-wrap: break-word;
+          z-index: 1;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        &:hover .tooltip-text {
+          visibility: visible;
+        }
+      }
+
+      .status {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #ffffff;
+        font-weight: 500;
+        text-align: center;
+
+        &.status-dodana {
+          background-color: #6c757d;
+        }
+        &.status-sprawdzona {
+          background-color: #28a745;
+        }
+        &.status-zlecona-do-realizacji {
+          background-color: #007bff;
+        }
+        &.status-umówiony-montaż {
+          background-color: #fd7e14;
+        }
+      }
+    }
+  }
+}

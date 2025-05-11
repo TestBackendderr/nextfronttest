@@ -6,7 +6,10 @@ import "../styles/Handlowiec.scss";
 import "../styles/Biuro.scss";
 import "../styles/UtworzUmowe.scss";
 import "../styles/ListaUmow.scss";
+import "../styles/ListaUmowBiuro.scss";
 import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Leftside from "../components/Leftside";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -17,7 +20,15 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="System zarządzania umowami" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <div className="app-container">
+        <Navbar />
+        <div className="main-content">
+          <Leftside />
+          <div className="page-content">
+            <Component {...pageProps} />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
