@@ -1,0 +1,153 @@
+.lista-umow {
+  padding: 20px;
+  background-color: #f4f6f9;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .sort-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    button {
+      padding: 8px 16px;
+      background-color: #1a252f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #2c3e50;
+      }
+    }
+  }
+
+  .umowy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .umowa-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+
+    .umowa-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #1a252f;
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+
+      span {
+        flex: 1;
+        text-align: left;
+      }
+    }
+
+    .umowa-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 16px;
+
+      span {
+        flex: 1;
+        min-width: 0;
+        word-break: break-word;
+      }
+
+      .product-tag {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #fff;
+
+        &.product-fotowoltaika {
+          background-color: #28a745;
+        }
+        &.product-magazyn-energii {
+          background-color: #007bff;
+        }
+        &.product-magazyn-ciepła {
+          background-color: #dc3545;
+        }
+        &.product-klimatyzacje {
+          background-color: #17a2b8;
+        }
+        &.product-pompa-ciepła {
+          background-color: #6610f2;
+        }
+        &.product-inne {
+          background-color: #6c757d;
+        }
+      }
+
+      .tooltip {
+        position: relative;
+        cursor: pointer;
+
+        &:hover:after {
+          content: attr(title);
+          position: absolute;
+          background-color: #333;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 4px;
+          bottom: 100%;
+          left: 0;
+          white-space: normal;
+          z-index: 10;
+          max-width: 200px;
+          word-wrap: break-word;
+        }
+      }
+
+      .status {
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #fff;
+
+        &.status-dodana {
+          background-color: #6c757d;
+        }
+        &.status-sprawdzona {
+          background-color: #28a745;
+        }
+        &.status-zlecona-do-realizacji {
+          background-color: #007bff;
+        }
+        &.status-umówiony-montaż {
+          background-color: #ff9800;
+        }
+      }
+    }
+  }
+}
+
+.moje-umowy-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.moje-umowy-content {
+  flex: 1;
+  padding: 20px;
+  padding-left: 240px; // ← ДАЕТ отступ для меню 220px + зазор
+}

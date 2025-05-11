@@ -13,7 +13,7 @@ const Leftside = () => {
         { label: "Obsługa Umów", href: "/biuro/obsluga" },
       ]
     : [
-        { label: "Moje Umowy", href: "/" },
+        { label: "Moje Umowy", href: "/MojeUmowy" },
         { label: "Utwórz Umowę", href: "/utworz" },
         { label: "Klienci", href: "/klienci" },
       ];
