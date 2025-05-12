@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const Leftside = () => {
  
   const router = useRouter();
-  const isBiuro = router.pathname.startsWith("/biuro");
+  const isBiuro = router.pathname.startsWith("/biuro") || router.pathname === "/UmowaWiecej";
 
   const menuItems = isBiuro
     ? [

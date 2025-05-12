@@ -1,8 +1,8 @@
 .umowa-wiecej-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background-color: #f4f6f8;
+  padding: 0;
 }
 
 .umowa-wiecej-container .main-content {
@@ -11,11 +11,8 @@
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-  margin-left: 270px;
-  margin-right: 16px;
-  margin-top: 80px;
-  margin-bottom: 16px;
-  max-width: 960px;
+  margin: 16px;
+  max-width: 1200px;
   color: #1a252f;
 }
 
@@ -26,96 +23,6 @@
   margin-bottom: 24px;
   color: #1a252f;
   text-transform: uppercase;
-}
-
-.umowa-wiecej-container .main-content h2 {
-  font-size: 20px;
-  margin: 24px 0 12px;
-  color: #1a252f;
-  font-weight: 600;
-}
-
-.umowa-wiecej-container .main-content .umowa-section {
-  margin-bottom: 20px;
-}
-
-.umowa-wiecej-container .main-content .umowa-section h3 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #1a252f;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-
-.umowa-wiecej-container .main-content .umowa-section p,
-.umowa-wiecej-container .main-content p {
-  font-size: 14px;
-  color: #1a252f;
-  margin: 2px 0;
-  line-height: 1.5;
-}
-
-.umowa-wiecej-container .main-content .umowa-section .products-selection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.umowa-wiecej-container .main-content .product-tag {
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #fff;
-  cursor: default;
-  transition: transform 0.2s ease-in-out;
-}
-
-.umowa-wiecej-container .main-content .product-tag:hover {
-  transform: scale(1.03);
-}
-
-.product-fotowoltaika {
-  background-color: #28a745;
-}
-
-.product-magazyn-energii {
-  background-color: #17a2b8;
-}
-
-.product-magazyn-ciepła {
-  background-color: #dc3545;
-}
-
-.product-klimatyzacje {
-  background-color: #007bff;
-}
-
-.product-pompa-ciepła {
-  background-color: #fd7e14;
-}
-
-.product-inne {
-  background-color: #6c757d;
-}
-
-.umowa-wiecej-container .main-content .opis-bok .full-opis {
-  color: #007bff;
-  margin-left: 4px;
-  cursor: pointer;
-  font-size: 13px;
-  font-style: italic;
-}
-
-.umowa-wiecej-container .main-content .opis-bok .full-opis:hover {
-  text-decoration: underline;
-}
-
-.umowa-wiecej-container .main-content hr {
-  border: none;
-  height: 1px;
-  background-color: #e0e0e0;
-  margin: 24px 0;
 }
 
 .umowa-wiecej-container .main-content .biuro2-content {
@@ -146,7 +53,7 @@
 
 .umowa-wiecej-container .main-content .biuro2-main-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
 }
 
@@ -172,6 +79,20 @@
   line-height: 1.5;
 }
 
+.umowa-wiecej-container .main-content .biuro2-section.dane p:first-of-type {
+  font-weight: 600;
+}
+
+.umowa-wiecej-container .main-content .biuro2-section.platnosci .dodaj-dokumenty {
+  color: #007bff;
+  cursor: pointer;
+  font-style: italic;
+}
+
+.umowa-wiecej-container .main-content .biuro2-section.platnosci .dodaj-dokumenty:hover {
+  text-decoration: underline;
+}
+
 .umowa-wiecej-container .main-content .historia {
   flex: 0 0 300px;
   max-height: 400px;
@@ -180,8 +101,8 @@
 
 @media (max-width: 768px) {
   .umowa-wiecej-container .main-content {
-    margin-left: 16px;
-    max-width: 100%;
+    margin: 8px;
+    padding: 16px;
   }
 
   .umowa-wiecej-container .main-content .biuro2-container {
